@@ -9,6 +9,7 @@
   <script src="https://unpkg.com/split-type"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
     .nav-wrapper {
@@ -20,6 +21,26 @@
       position: absolute;
       z-index: 0;
     }
+    .container {
+      max-width: 100%;
+      padding: 0 20px;
+      margin: 0 auto;
+  }
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+  }
+  .grid-item {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      overflow: hidden;
+  }
+  .grid-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+  }
   </style>
 </head>
 
@@ -61,82 +82,130 @@
     </ul>
 </nav>
 
-<div class="container mx-auto px-4 py-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-        <!-- Replace the placeholder image paths with your image URLs -->
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img1.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-100 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img2.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img3.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img4.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img5.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img6.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img7.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img8.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img9.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img10.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img11.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img12.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img13.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img14.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img15.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img16.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img17.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img18.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img19.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img20.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img21.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-        <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="../ingredients/img22.jpeg" alt="Image 1" class="max-w-full h-auto">
-        </div>
-
-        <!-- Repeat this div block for each image you want to add -->
-        <!-- Example: -->
-        <!-- <div class="w-full bg-gray-300 rounded-lg flex justify-center items-center">
-            <img src="image2.jpg" alt="Image 2" class="max-w-full h-auto">
-        </div> -->
+<div class="container">
+  <div class="grid">
+      <!-- Repeat this block for each image -->
+      <div class="grid-item">
+          <a href="../ingredients/img1.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+              <img src="../ingredients/img1.jpeg" alt="Image 1">
+          </a>
+      </div>
+      <div class="grid-item">
+        <a href="../ingredients/img2.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+            <img src="../ingredients/img2.jpeg" alt="Image 1">
+        </a>
     </div>
+    <div class="grid-item">
+      <a href="../ingredients/img3.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+          <img src="../ingredients/img3.jpeg" alt="Image 1">
+      </a>
+  </div>
+  <div class="grid-item">
+    <a href="../ingredients/img4.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+        <img src="../ingredients/img4.jpeg" alt="Image 1">
+    </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img5.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img5.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img6.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img6.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img7.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img7.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img8.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img8.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img9.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img9.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img10.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img10.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img11.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img11.jpeg" alt="Image 1">
+  </a>
+</div>
+
+<div class="grid-item">
+  <a href="../ingredients/img12.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img12.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img13.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img13.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img14.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img14.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img15.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img15.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img16.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img16.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img17.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img17.jpeg" alt="Image 1">
+  </a>
+</div>
+
+<div class="grid-item">
+  <a href="../ingredients/img18.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img18.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img19.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img19.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img20.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img20.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img21.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img21.jpeg" alt="Image 1">
+  </a>
+</div>
+<div class="grid-item">
+  <a href="../ingredients/img22.jpeg" data-lightbox="gallery" data-title="Image 1" class="flex justify-center items-center h-full">
+      <img src="../ingredients/img22.jpeg" alt="Image 1">
+  </a>
+</div>
+      <!-- Repeat this block for each image -->
+      <!-- Example: -->
+      <!-- <div class="grid-item">
+          <a href="image2.jpg" data-lightbox="gallery" data-title="Image 2">
+              <img src="image2.jpg" alt="Image 2">
+          </a>
+      </div> -->
+      <!-- Repeat this block for each image -->
+  </div>
 </div>
 
 <footer class="text-white body-font bg-black">
@@ -231,5 +300,6 @@
 
     let text = new SplitType('#text1')
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
