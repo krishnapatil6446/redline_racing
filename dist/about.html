@@ -20,6 +20,39 @@
       position: absolute;
       z-index: 0;
     }
+
+    .container1 {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    
+    .item {
+      width: calc(33.33% - 20px);
+      margin: 20px;
+      text-align: center;
+    }
+    
+    .item img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .item {
+        width: calc(50% - 20px);
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      .item {
+        width: 100%;
+      }
+    }
+  
   </style>
 </head>
 
@@ -62,7 +95,49 @@
 </nav>
 
 
+ <!-- Background Image for Desktop -->
+ <div class="relative hidden md:block bg-cover bg-center h-screen" style="background-image: url('../ingredients/pexels-jenda-kubeš-13641535.jpg')">
+  <!-- Your content here -->
+  <div class="grid place-content-center h-screen relative">
+    <h1 class="absolute top-40 left-1/2 transform -translate-x-1/2 sm:text-8xl font-bold text-white text-center z-10">
+      About Us
+    </h1>
+    <h3 class="absolute bottom-40 inset-x-0 sm:text-2xl font-bold text-white text-center text-10 z-10">
+      We are Team Redline Racing, JSPM'S RSCOE's official Formula Student Team.
+    </h3>
+  </div>
+  </div>
 
+    <!-- Background Image for Mobile -->
+  <div class=" relative md:hidden bg-cover bg-center h-screen" style="background-image: url('../ingredients/mobileview.jpeg')">
+  <!-- Your content here -->
+    <div class="grid place-content-center h-screen relative">
+    <h1 class="absolute top-40 left-1/2 transform -translate-x-1/2 text-8xl font-bold text-white text-center z-1">
+      About Us
+    </h1>
+    <h3 class="absolute bottom-40 inset-x-0 sm:text-2xl font-bold text-white text-center text-10 z-1">
+      We are Team Redline Racing, JSPM'S RSCOE's official Formula Student Team.
+    </h3>
+    </div>
+  </div>
+<!--PAGE2-->
+  <div class="container1">
+    <div class="item">
+      <img src="../ingredients/teamwork.png" alt="Team Member">
+      <h2>Team Members</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="item">
+      <img src="../ingredients/cars.png" alt="Car Designed">
+      <h2>Cars Designed</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="item">
+      <img src="../ingredients/trophy.png" alt="Achievements">
+      <h2>Achievements</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
 
 
 <footer class="text-white body-font bg-black">
