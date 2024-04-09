@@ -10,6 +10,33 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="style.css">
+
+    
+  <link rel="shortcut icon" type="image/png" href="image/fevicon.png"/>
+  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="menustyle.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <!--font awesom-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="menustyle.css">
+ 
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ 
+   <title>Cars</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-D11340MNM2"></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+ 
+   gtag('config', 'G-D11340MNM2');
+ </script>
   <style>
     .nav-wrapper {
       position: relative;
@@ -20,10 +47,75 @@
       position: absolute;
       z-index: 0;
     }
+
+    body {
+      background: rgb(255, 255, 255);
+      background-attachment: fixed;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+      margin: 0;
+      padding: 0;
+      height: 1500px;
+    }
+
+    /* png image shadow***********&&******* */
+    img {
+      -webkit-filter: drop-shadow(10px 10px 5px #222);
+      filter: drop-shadow(6px 12px 10px #222);
+    }
+    .row img {
+      -webkit-filter: drop-shadow(10px 10px 5px #222);
+      filter: drop-shadow(1px 1px 4px rgb(216, 216, 216));
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background:rgb(255, 255, 255);
+
+    }
+
+
+    .swiper-slide {
+      background-position: center;
+      width: 300px;
+      height: 300px;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+/*    text-shadow: 2px 5px 6px rgb(255, 255, 255); */
+      box-shadow: 2px 5px 6px black;
+
+
+    }
+
+    .card {
+      background-color: rgb(239, 68, 68);
+    }
+    .iconsize{
+      padding: 10px;
+      font-size: 50px;
+
+    }
+    .secondColumn{
+      background-color: rgb(239, 68, 68);
+      box-shadow: 10px 8px 7px rgb(22, 22, 22);
+     
+      height: auto;
+    }
+     .footermark{
+         color: rgb(223, 223, 223);
+         line-height: 16px;
+         text-shadow: 2px 3px 4px black;
+      
+     }
+
+
   </style>
 </head>
 
-<body>
+<body class="mobile">
 
   <nav class="nav-wrapper bg-red-500 p-5 text-white shadow md:flex md:items-center md:justify-between z-50">
     <div class="flex justify-between items-center">
@@ -56,151 +148,177 @@
             <a href="./Team_Gallery.html" class="text-xl hover:text-black duration-500">TEAM GALLERY</a>
         </li>
         <li class="mx-4 my-6 md:my-0">
-            <a href="./contact.html" class="text-xl hover:text-black duration-500">CONTACT US</a>
+            <a href="./contact.php" class="text-xl hover:text-black duration-500">CONTACT US</a>
         </li>
     </ul>
 </nav>
 
 
-<div
-  id="carouselExampleCaptions"
-  class="relative"
-  data-twe-carousel-init
-  data-twe-ride="carousel">
-  <!--Carousel indicators-->
-  <div
-    class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-    data-twe-carousel-indicators>
-    <button
-      type="button"
-      data-twe-target="#carouselExampleCaptions"
-      data-twe-slide-to="0"
-      data-twe-carousel-active
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-current="true"
-      aria-label="Slide 1"></button>
-    <button
-      type="button"
-      data-twe-target="#carouselExampleCaptions"
-      data-twe-slide-to="1"
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-label="Slide 2"></button>
-    <button
-      type="button"
-      data-twe-target="#carouselExampleCaptions"
-      data-twe-slide-to="2"
-      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-      aria-label="Slide 3"></button>
+<section>
+
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      
+      <div data-aos="fade-down" class="swiper-slide card" style="position: relative; ">
+        <a href="#signes" >  <img  src="../images/2019f.png"
+          alt="" style="position: absolute; top: 5px; left: 5px; width: 100%; height: auto; ">
+          <p style="position: absolute; top: 5; left: 10; padding: 6px 25px;color: rgb(255, 255, 255); border-bottom:3px solid red ;">2019 Car</p>
+        <h1 style="position: absolute; bottom: 10px; left: 20px; font-family: 'Times New Roman', Times, serif;">Signes 1.0</h1> </div></a>
+      
+        <div data-aos="fade-down" onclick="scrollingmiratwo()" class="swiper-slide card" style="position: relative;">
+          <img src="../images/2018.png"
+            alt="" style="position: absolute; top: 5px; left: 5px; width: 100%; height: auto; ">
+            <p style="position: absolute; top: 5; left: 10; padding: 6px 25px;color: rgb(255, 254, 254); border-bottom:3px solid red ;">2018 Car</p>
+          <h1 style="position: absolute; bottom: 10px; left: 20px; font-family: 'Times New Roman', Times, serif;">Mirabeau 2.0</h1> </div>
+        
+    
+    
+      <div data-aos="fade-down" onclick="scrollingmiraone()" class="swiper-slide  card" style="position: relative;"><img src="../images/2017.png" alt=""
+          style="position: absolute; top: 5px; left: 5px; width: 100%; height: auto; ">
+          <p style="position: absolute; top: 5; left: 10; padding: 6px 25px;color: rgb(255, 255, 255); border-bottom:3px solid red ;">2017 Car</p>
+        <h1 style="position: absolute; bottom: 10px; left: 20px; font-family: 'Times New Roman', Times, serif;">Mirabeau 1.0
+        </h1>
+      </div>
+      <div data-aos="fade-down" onclick="scrollingrrtwo()" class="swiper-slide  card" style="position: relative;"><img src="../images/2016.png" alt=""
+        style="position: absolute; top: 5px; left: 5px; width: 100%; height: auto; ">
+        <p style="position: absolute; top: 5; left: 10; padding: 6px 25px;color: rgb(255, 255, 255); border-bottom:3px solid red ;">2016 Car</p>
+      <h1 style="position: absolute; bottom: 10px; left: 20px; font-family: 'Times New Roman', Times, serif;">RR 2.0
+      </h1>
+    </div>
+    <div data-aos="fade-down" onclick="scrollingrraone()" class="swiper-slide  card" style="position: relative;"><img src="../images/2015.png" alt=""
+      style="position: absolute; top: 5px; left: 5px; width: 100%; height: auto; ">
+      <p style="position: absolute; top: 5; left: 10; padding: 6px 25px;color: rgb(255, 255, 255); border-bottom:3px solid red ;">2015 Car</p>
+    <h1 style="position: absolute; bottom: 10px; left: 20px; font-family: 'Times New Roman', Times, serif;">RR 550
+    </h1>
+  </div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
   </div>
 
-  <!--Carousel items-->
-  <div
-    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-    <!--First item-->
-    <div
-      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-active
-      data-twe-carousel-item
-      style="backface-visibility: hidden">
-      <img
-        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
-        class="block w-full"
-        alt="..." />
-      <div
-        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-        <h5 class="text-xl">First slide label</h5>
-        <p>
-          Some representative placeholder content for the first slide.
-        </p>
+</section>
+<!--information of cars***********************************-->
+
+<section style="margin-top:70px" id="signes">
+  <div class="container" >
+   
+      <h1 style="color: rgb(0, 0, 0) ; font-size: 50px; border-bottom: 2px solid rgb(239, 68, 68); text-shadow: 1px 2px 6px rgb(255, 255, 255); display: inline-block;">Signes-<span style="color: rgb(239, 68, 68);">1.0</span></h1>
+    <div class="row" style="display: flex; justify-content: center;">
+     
+        <!--1st column-->
+      <div data-aos="fade"  class="col-sm firstColumn"  style="width: 100%;height: auto;  ">
+        <img src="../images/2019f.png" alt="" style="width: 100%; height: auto; margin-top: 10px;">
       </div>
-    </div>
-    <!--Second item-->
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      style="backface-visibility: hidden">
-      <img
-        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
-        class="block w-full"
-        alt="..." />
-      <div
-        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-        <h5 class="text-xl">Second slide label</h5>
-        <p>
-          Some representative placeholder content for the second slide.
-        </p>
-      </div>
-    </div>
-    <!--Third item-->
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      style="backface-visibility: hidden">
-      <img
-        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
-        class="block w-full"
-        alt="..." />
-      <div
-        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-        <h5 class="text-xl">Third slide label</h5>
-        <p>
-          Some representative placeholder content for the third slide.
-        </p>
+      <!--2nd column--> 
+      <div data-aos="fade"  class="col-sm secondColumn" style="padding: 5px 0px; margin-top: 50px; height: 350px; ">
+        
+        <h4><i  class="fa fa-car iconsize" aria-hidden="true"></i> 2019 Season</h4>
+        <h4><i class="fa fa-cog iconsize" aria-hidden="true"></i> 390 CC</h4>
+        <h4><i class="fa fa-wrench iconsize" aria-hidden="true"></i>  Fifth Car of TeamRR</h4>
+        <h4><i class="fa fa-calendar iconsize" aria-hidden="true"></i>  Supra Event 2019</h4>   
       </div>
     </div>
   </div>
+</section>
 
-  <!--Carousel controls - prev item-->
-  <button
-    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-twe-target="#carouselExampleCaptions"
-    data-twe-slide="prev">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Previous</span
-    >
-  </button>
-  <!--Carousel controls - next item-->
-  <button
-    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    type="button"
-    data-twe-target="#carouselExampleCaptions"
-    data-twe-slide="next">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Next</span
-    >
-  </button>
-</div>
+<!--2ndone info*******************************************-->
+<section style="margin-top:70px" id="mira">
+  <div class="container" >
+   
+      <h1 style="color: rgb(0, 0, 0); font-size: 50px; border-bottom: 2px solid rgb(239, 68, 68); text-shadow: 1px 2px 6px rgb(255, 255, 255); display: inline-block;">Mirabeau-<span style="color: rgb(239, 68, 68);">2.0</span></h1>
+    <div class="row" style="display: flex; justify-content: center;">
+     
+        <!--1st column-->
+      <div data-aos="fade" onclick="scrollingsecond()" class="col-sm firstColumn"  style="width: 100%;height: auto;  ">
+        <img src="../images/2018.png" alt="" style="width: 100%; height: auto; margin-top: 10px;">
+      </div>
+      <!--2nd column--> 
+      <div data-aos="fade-right"  class="col-sm secondColumn" style="padding: 5px 0px; margin-top: 50px; ">
+        
+        <h4><i  class="fa fa-car iconsize" aria-hidden="true"></i> 2018 Season</h4>
+        <h4><i class="fa fa-cog iconsize" aria-hidden="true"></i>  390 CC</h4>
+        <h4><i class="fa fa-wrench iconsize" aria-hidden="true"></i>  Fourth Car of TeamRR</h4>
+        <h4><i class="fa fa-calendar iconsize" aria-hidden="true"></i>  Supra Event 2018</h4>   
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--third info*********************************************-->
+<section style="margin-top:70px">
+  <div class="container">
+   
+      <h1 style="color: rgb(0, 0, 0); font-size: 50px; border-bottom: 2px solid rgb(239, 68, 68); text-shadow: 1px 2px 6px rgb(255, 255, 255); display: inline-block;">Mirabeau-<span style="color: rgb(239, 68, 68);">1.0</span></h1>
+    <div class="row" style="display: flex; justify-content: center;">
+     
+        <!--1st column-->
+      <div data-aos="fade" onclick="scrollingthird()" class="col-sm firstColumn"  style="width: 100%;height: auto;  ">
+        <img src="../images/2017.png" alt="" style="width: 100%; height: auto; margin-top: 10px;">
+      </div>
+      <!--2nd column--> 
+      <div data-aos="fade-right" class="col-sm secondColumn" style="padding: 5px 0px; margin-top: 50px; ">
+        
+        <h4><i  class="fa fa-car iconsize" aria-hidden="true"></i> 2017 Season</h4>
+        <h4><i class="fa fa-cog iconsize" aria-hidden="true"></i > 550 CC</h4>
+        <h4><i class="fa fa-wrench iconsize" aria-hidden="true"></i>  Third Car of TeamRR</h4>
+        <h4><i class="fa fa-calendar iconsize" aria-hidden="true"></i>  Supra Event 2017 &  Formula Bharat 2018 </h4>   
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<!--fourth info***********************************-->
+<section style="margin-top:70px">
+  <div class="container">
+   
+      <h1 style="color: rgb(0, 0, 0); font-size: 50px; border-bottom: 2px solid rgb(239, 68, 68); text-shadow: 1px 2px 6px rgb(255, 255, 255); display: inline-block;">RR-<span style="color: rgb(239, 68, 68);">2.0</span></h1>
+    <div class="row" style="display: flex; justify-content: center;">
+     
+        <!--1st column-->
+      <div data-aos="fade" onclick="scrollingfourth()" class="col-sm firstColumn"  style="width: 100%;height: auto;  ">
+        <img src="../images/2016.png" alt="" style="width: 100%; height: auto; margin-top: 10px;">
+      </div>
+      <!--2nd column--> 
+      <div data-aos="fade-right" class="col-sm secondColumn" style="padding: 5px 0px; margin-top: 50px; ">
+        
+        <h4><i  class="fa fa-car iconsize" aria-hidden="true"></i> 2016 Season</h4>
+        <h4><i class="fa fa-cog iconsize" aria-hidden="true"></i> 550 CC</h4>
+        <h4><i class="fa fa-wrench iconsize" aria-hidden="true"></i>  Second Car of TeamRR</h4>
+        <h4><i class="fa fa-calendar iconsize" aria-hidden="true"></i>  Supra Event 2016</h4>   
+      </div>
+    </div>
+  </div>
+</section>
+<!--fifth info**********************************************-->
+<section style="margin-top:70px; margin-bottom: 100px;">
+  <div class="container" >
+   
+      <h1 style="color: rgb(0, 0, 0); font-size: 50px; border-bottom: 2px solid rgb(239, 68, 68); text-shadow: 1px 2px 6px rgb(255, 255, 255); display: inline-block;">RR-<span style="color: rgb(239, 68, 68);">1.0</span></h1>
+    <div class="row" style="display: flex; justify-content: center;">
+     
+        <!--1st column-->
+      <div data-aos="fade" onclick="scrollingfifth()" class="col-sm firstColumn"  style="width: 100%;height: auto;  ">
+        <img src="../images/2015.png" alt="" style="width: 100%; height: auto; margin-top: 10px;">
+      </div>
+      <!--2nd column--> 
+      <div data-aos="fade-right" class="col-sm secondColumn" style="padding: 5px 0px; margin-top: 50px; ">
+        
+        <h4><i  class="fa fa-car iconsize" aria-hidden="true"></i> 2015 Season</h4>
+        <h4><i class="fa fa-cog iconsize" aria-hidden="true"></i> 550 CC</h4>
+        <h4><i class="fa fa-wrench iconsize" aria-hidden="true"></i>  First Car of TeamRR</h4>
+        <h4><i class="fa fa-calendar iconsize" aria-hidden="true"></i>  Supra Event 2016</h4>   
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 
 <footer class="text-white body-font bg-black">
@@ -244,7 +362,10 @@
               <a href="./Team_Gallery.html" class="text-white hover:text-red-500">Team Gallery</a>
             </li>
             <li>
-              <a href="./contact.html" class="text-white hover:text-red-500">Contact us</a>
+              <a href="./contact.php" class="text-white hover:text-red-500">Contact us</a>
+            </li>
+            <li>
+              <a href="./privacypolicy.html" class="text-white hover:text-red-500">Privacy Policy</a>
             </li>
           </nav>
         </div>
@@ -256,8 +377,8 @@
     </div>
     <div class="bg-gray-100">
       <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-        <p class="text-red-500 text-sm text-center sm:text-left">© 2024 Markyway —
-          <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-red-600 ml-1" target="_blank">@KrishnaPatil</a>
+        <p class="text-red-500 text-sm text-center sm:text-left">© 2024 Team Redline Racing.The content on this site, <br>including images, videos, text, and graphic designs,<br> is owned by www.teamredlineracing.in
+          
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
           <!-- <a href = "" class="text-gray-500 hover:text-red-500">
@@ -288,12 +409,6 @@
   </footer>
 
   <script>
-    import {
-      Carousel,
-      initTWE,
-    } from "tw-elements";
-    
-    initTWE({ Carousel });
     
     function Menu(e) {
       let list = document.querySelector('ul');
@@ -305,5 +420,62 @@
     // Initialization for ES Users
 
   </script>
+  <script src="index.js"></script>
+
+<!--Start of Tawk.to Script-->
+<!-- <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/602cac46918aa261273f9bee/1eun81thk';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> -->
+<!--End of Tawk.to Script-->
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+  <script src="index.js"></script>
+  <script>
+    function scrollingsignes() {
+      window.scrollTo(0,500);
+    }
+    function scrollingmiratwo() {
+      window.scrollTo(0, 1300);
+    }
+    function scrollingmiraone() {
+      window.scrollTo(0, 2000);
+    }
+    function scrollingrrtwo() {
+      window.scrollTo(0, 2800);
+    }
+    function scrollingrraone() {
+      window.scrollTo(0, 3500);
+    }
+  </script>
+  
+  <script>
+  AOS.init();
+</script>
 </body>
 </html>

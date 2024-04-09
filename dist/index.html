@@ -20,6 +20,59 @@
       position: absolute;
       z-index: 0;
     }
+
+        /* Sliding sponsors*/
+        @keyframes slide {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-100%);
+          }
+        }
+        
+        .logos {
+          overflow: hidden;
+          padding: 60px 0;
+          background: white;
+          white-space: nowrap;
+          position: relative;
+          transition: transform 1s ease;
+        }
+        
+        .logos:before,
+        .logos:after {
+          position: absolute;
+          top: 0;
+          width: 250px;
+          height: 100%;
+          content: "";
+          z-index: 2;
+        }
+        
+        .logos:before {
+          left: 0;
+          background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+        }
+        
+        .logos:after {
+          right: 0;
+          background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+        }
+        
+        .logos:hover .logos-slide {
+          animation-play-state: paused;
+        }
+        
+        .logos-slide {
+          display: inline-block;
+          animation: 35s slide infinite linear;
+        }
+        
+        .logos-slide img {
+          height: 50px;
+          margin: 0 40px;
+        }
   </style>
 </head>
 
@@ -56,7 +109,7 @@
             <a href="./Team_Gallery.html" class="text-xl hover:text-black duration-500">TEAM GALLERY</a>
         </li>
         <li class="mx-4 my-6 md:my-0">
-            <a href="./contact.html" class="text-xl hover:text-black duration-500">CONTACT US</a>
+            <a href="./contact.php" class="text-xl hover:text-black duration-500">CONTACT US</a>
         </li>
     </ul>
 </nav>
@@ -105,8 +158,68 @@
       </div>
     </div>
   </section>
+  <div class="flex justify-center">
+  <h2 class="text-4xl font-medium">Sponsors</h2>
+  </div>
   
-  
+  <div class="logos">
+    <div class="logos-slide flex ">
+      <img src="../sponsorlogo/jspm.png" />
+      <img src="../sponsor/markyway.jpeg" />
+      <img src="../sponsorlogo/ipg.jpg" />
+      <img src="../sponsorlogo/Agnimotors_Full_logo.jpg" />
+      <img src="../sponsorlogo/Altium.png" />
+      <img src="../sponsorlogo/jspm.png" />
+      <img src="../sponsor/markyway.jpeg" />
+      <img src="../sponsorlogo/ipg.jpg" />
+      <img src="../sponsorlogo/Agnimotors_Full_logo.jpg" />
+      <img src="../sponsorlogo/Altium.png" />
+    </div>
+
+  </div>
+<!-- Map -->
+<div class="min-h flex justify-center items-center bg-white">
+  <div class="w-full max-w-screen-lg p-8 bg-white rounded-lg shadow-lg">
+      <!-- Map Container -->
+      <div class="relative h-96">
+          <!-- Placeholder for the map (replace with your map implementation) -->
+          <div class="w-full h-full bg-gray-400 rounded-lg relative">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.985410528728!2d73.74731897537895!3d18.619725966137434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbbc138acb7b%3A0x67043867a211a31d!2sJSPM%20Rajarshi%20Shahu%20College%20Of%20Engineering%20%2C%20Tathawade!5e0!3m2!1sen!2sin!4v1712695821847!5m2!1sen!2sin" width="100%" height="100%" style="border:0; position: absolute; top: 0; left: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <!-- Know More Button -->
+              <button class="absolute bottom-4 right-4 bg-red-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-red-600 transition duration-300">
+                  <a href="./contact.php">Know More</a>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="max-w-screen-lg mx-auto py-8">
+  <h2 class="flex justify-center text-4xl font-bold">Team Gallery</h2>
+  <div class="flex flex-col md:flex-row justify-center items-center">
+      <!-- Image 1 -->
+      <div class="m-4">
+          <img src="../ingredients/img1.jpeg" alt="Image 1" class="w-full h-auto">
+      </div>
+      <!-- Image 2 -->
+      <div class="m-4">
+          <img src="../ingredients/img2.jpeg" alt="Image 2" class="w-full h-auto">
+      </div>
+      <!-- Image 3 -->
+      <div class="m-4">
+          <img src="../ingredients/img3.jpeg" alt="Image 3" class="w-full h-auto">
+      </div>
+  </div>
+  <!-- Learn More Button -->
+  <div class="text-center mt-8">
+      <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+          <a href="./Team_Gallery.html">Learn More</a>
+      </button>
+  </div>
+</div>
+
+
+
   
   
   
@@ -154,7 +267,10 @@
               <a href="./Team_Gallery.html" class="text-white hover:text-red-500">Team Gallery</a>
             </li>
             <li>
-              <a href="./contact.html" class="text-white hover:text-red-500">Contact us</a>
+              <a href="./contact.php" class="text-white hover:text-red-500">Contact us</a>
+            </li>
+            <li>
+              <a href="./privacypolicy.html" class="text-white hover:text-red-500">Privacy Policy</a>
             </li>
           </nav>
         </div>
@@ -166,8 +282,8 @@
     </div>
     <div class="bg-gray-100">
       <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-        <p class="text-red-500 text-sm text-center sm:text-left">© 2024 Markyway —
-          <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-red-600 ml-1" target="_blank">@KrishnaPatil</a>
+        <p class="text-red-500 text-sm text-center sm:text-left">© 2024 Team Redline Racing.The content on this site, <br>including images, videos, text, and graphic designs,<br> is owned by www.teamredlineracing.in
+          
         </p>
         <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
           <!-- <a href = "" class="text-gray-500 hover:text-red-500">
