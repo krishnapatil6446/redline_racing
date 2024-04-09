@@ -5,12 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redline Racing</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/split-type"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <link rel="stylesheet" href="style.css">
   <style>
+  /*  .accordion-item {
+      background-color: rgb(49, 49, 49);
+      color: cornsilk;
+    }
+    .accordion-header {
+      background-color: rgb(31, 30, 30);
+      cursor: pointer;
+    }
+    .accordion-body {
+      margin-left: 40px;
+    }
+    hr {
+      border-top: 3px solid red;
+      margin-top: -6px;
+      width: 35vw;
+    }*/
     .nav-wrapper {
       position: relative;
       z-index: 2;
@@ -21,7 +39,7 @@
       z-index: 0;
     }
 
-    .container1 {
+ /*   .container1 {
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
@@ -52,7 +70,7 @@
         width: 100%;
       }
     }
-  
+  */
   </style>
 </head>
 
@@ -121,23 +139,88 @@
     </div>
   </div>
 <!--PAGE2-->
-  <div class="container1">
-    <div class="item">
-      <img src="../ingredients/teamwork.png" alt="Team Member">
-      <h2>Team Members</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="item">
-      <img src="../ingredients/cars.png" alt="Car Designed">
-      <h2>Cars Designed</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="item">
-      <img src="../ingredients/trophy.png" alt="Achievements">
-      <h2>Achievements</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<div class="container mx-auto px-4 py-8 flex flex-wrap justify-around">
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-auto mb-8 lg:mb-0">
+    <div class="flex items-center justify-center">
+      <img src="../ingredients/teamteam.png" alt="Team Member" class="w-24 h-24">
+      <h2 class="ml-4 font-bold text-2xl">35 Team Members</h2>
     </div>
   </div>
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-auto mb-8 lg:mb-0">
+    <div class="flex items-center justify-center">
+      <img src="../ingredients/carscars.png" alt="Car Designed" class="w-24 h-24">
+      <h2 class="ml-4 text-2xl font-bold">5 Cars Designed</h2>
+    </div>
+  </div>
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-auto">
+    <div class="flex items-center justify-center">
+      <img src="../ingredients/achiements.png" alt="Achievements" class="w-24 h-24">
+      <h2 class="ml-4 text-2xl font-bold">4 Achievements</h2>
+    </div>
+  </div>
+</div>
+
+<!--PAGE2 CONTINUED-->
+<div class="bg-black  p-8 rounded-lg shadow-lg">
+  <h1 class="text-5xl font-bold text-center mb-8 text-white">Team Brief</h1>
+  <div class="flex justify-center">
+    <div class="max-w-4xl">
+      <p class="text-base md:text-lg lg:text-base xl:text-lg leading-relaxed text-white">
+        We are a group of engineering students from <span class="text-red-500">JSPM’s Rajarshi Shahu College Of Engineering, Pune</span>, who are passionate about research and design project. Team Redline Racing was conceived in the year 2014 when a few aspirated colleagues decided to go beyond classroom learning and create something by applying theory into practice. The team is blend of students from various years and branches where each member contributes towards the team in specialized areas of interest. Over the years, our team has showcased the exponential growth both on and off-pitch. In the 5 years we have been competing, we went from a rookie team with <span class="text-red-500">AIR 75 in 2015 to AIR 3 in 2019.</span> But that will never be enough. The times are changing and it's getting harder to stand your footing, one must always try to push their limits. Over the years, our team has grown and so have the ideas to make the vehicle more efficiently. This stems from the team learning more varied techniques to design the vehicle and cut the excess usage of materials. We employ new software's to test the vehicle and its benefitted us at every turn. We have started to work on the parts using generative design; a process that is revolutionizing modern car designs all over the world. Keeping up with the times helps one to think ahead and be the change. We at team redline believe in pushing our limits day in day out. We are obsessed about the vehicle and that is why we won’t stop trying to make it better.
+      </p>
+    </div>
+  </div>
+</div>
+
+          
+<section class="w-full h-screen mt-8 flex flex-col justify-center items-center">
+  <!-- Achievement Section -->
+  <h3 class="text-3xl font-semibold text-gray-800 mb-4">Achievements</h3>
+  <hr class="w-full sm:w-1/3 border-t-4 border-red-500 mb-8">
+
+  <!-- Achievement Cards -->
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Achievement Card 2019 -->
+      <div class="bg-red-300 rounded-lg shadow-md">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-4">2019 Season</h2>
+          <p class="text-gray-700">1) AIR 3 In Supra SAE India 2019.</p>
+          <p class="text-gray-700">2) 2nd In Design Event Supra SAE India 2019</p>
+          <p class="text-gray-700">3) Most Compact Car in the Supra Event.</p>
+        </div>
+      </div>
+
+      <!-- Achievement Card 2018 -->
+      <div class="bg-red-300 rounded-lg shadow-md">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-4">2018 Season</h2>
+          <p class="text-gray-700">1) AIR 10 In Supra SAE India 2018.</p>
+          <p class="text-gray-700">2) 1st in Cost and Manufacturing Award 2018</p>
+        </div>
+      </div>
+
+      <!-- Achievement Card 2017 -->
+      <div class="bg-red-300 rounded-lg shadow-md">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-4">2017 Season</h2>
+          <p class="text-gray-700">1) AIR 13 In Supra SAE India 2017.</p>
+          <p class="text-gray-700">2) 1st in Cost and Manufacturing Award 2017</p>
+        </div>
+      </div>
+
+      <!-- Achievement Card 2022 -->
+      <div class="bg-red-300 rounded-lg shadow-md">
+        <div class="p-6">
+          <h2 class="text-xl font-semibold mb-4">2022 Season</h2>
+          <p class="text-gray-700">1) Section pi ev 2022: AIR 8th.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 <footer class="text-white body-font bg-black">
@@ -231,6 +314,14 @@
     }
 
     let text = new SplitType('#text1')
+
+    function toggleDropdown() {
+      var dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("hidden");
+    }
   </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
